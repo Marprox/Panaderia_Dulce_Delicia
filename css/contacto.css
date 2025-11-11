@@ -1,0 +1,250 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: url("../img/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* ===== ENCABEZADO ===== */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: girarLogo 10s linear infinite;
+}
+
+@keyframes girarLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo h1 {
+    color: #ffd37a;
+    font-size: 1.8em;
+}
+
+/* ===== MENÚ ===== */
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: #ffd37a;
+}
+
+.menu .boton {
+    padding: 8px 15px;
+    border: 1px solid #ffd37a;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu .boton:hover {
+    background: #ffd37a;
+    color: #000;
+}
+
+/* ===== HERO ===== */
+.hero-contacto {
+    text-align: center;
+    padding: 140px 20px 80px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-contacto h2 {
+    font-size: 3em;
+    color: #ffd37a;
+    margin-bottom: 10px;
+}
+
+.hero-contacto p {
+    font-size: 1.2em;
+    color: #fff4c1;
+}
+
+/* ===== FORMULARIO ===== */
+.contacto-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 40px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.formulario {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,215,122,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255,215,122,0.4);
+}
+
+.formulario h3 {
+    text-align: center;
+    color: #ffd37a;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    color: #ffd37a;
+    font-weight: 500;
+}
+
+.campo input,
+.campo textarea {
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    box-shadow: 0 0 10px rgba(255,215,122,0.5);
+    background: rgba(255,255,255,0.2);
+}
+
+.btn-enviar {
+    background: #ffd37a;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: #fff4c1;
+    transform: scale(1.05);
+}
+
+/* ===== MAPA ===== */
+.mapa {
+    flex: 1 1 400px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.mapa h3 {
+    color: #ffd37a;
+    margin-bottom: 20px;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.reveal.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(180deg, rgba(40,20,10,0.9), rgba(10,5,0,0.95));
+    color: #fff;
+    padding: 60px 20px 20px 20px;
+    border-top: 2px solid rgba(255,215,122,0.4);
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.footer-logo h2 {
+    color: #ffd37a;
+}
+
+.footer-info h3,
+.footer-redes h3 {
+    color: #ffd37a;
+    margin-bottom: 10px;
+}
+
+.iconos-redes a {
+    font-size: 1.8em;
+    color: #ffd37a;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.iconos-redes a:hover {
+    color: #fff4c1;
+    transform: scale(1.2);
+}
+
+.footer-creditos {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,215,122,0.2);
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .contacto-form {
+        flex-direction: column;
+        align-items: center;
+    }
+}
